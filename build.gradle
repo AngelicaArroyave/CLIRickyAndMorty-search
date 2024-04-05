@@ -1,11 +1,17 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'com.APIRickyAndMorty'
+version '0.1.0'
 
 sourceCompatibility = 1.8
+
+application {
+    mainClassName = "com.APIRickyAndMorty.RickyAndMortySearch"
+    applicationName = "api-search"
+}
 
 repositories {
     mavenCentral()
@@ -13,4 +19,13 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    // Toma los argumentos y genera objetos de java
+    // https://mvnrepository.com/artifact/com.beust/jcommander
+    implementation group: 'com.beust', name: 'jcommander', version: '1.82'
+    // Es el responsable de hacer peticiones web
+    // https://mvnrepository.com/artifact/io.github.openfeign/feign-core
+    implementation group: 'io.github.openfeign', name: 'feign-core', version: '13.2.1'
+    // Convierte de json a objetos de java
+    // https://mvnrepository.com/artifact/io.github.openfeign/feign-gson
+    implementation group: 'io.github.openfeign', name: 'feign-gson', version: '13.2.1'
 }
