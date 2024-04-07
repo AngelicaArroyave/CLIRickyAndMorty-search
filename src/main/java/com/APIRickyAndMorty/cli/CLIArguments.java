@@ -60,12 +60,6 @@ public class CLIArguments {
     )
     private boolean isHelp;
 
-    @Parameter(
-            names = {"--page", "-p"},
-            description = "La API devuelve x resultados, usar un numero para la pagina"
-    )
-    private int page = 1;
-
     /**
      * Sirve como especie de supplier, de esta manera no se depende de un constructor
      */
@@ -101,10 +95,6 @@ public class CLIArguments {
         return isHelp;
     }
 
-    public int getPage() {
-        return page;
-    }
-
     @Override
     public String toString() {
         return "CLIArguments{" +
@@ -115,7 +105,6 @@ public class CLIArguments {
                 ", type='" + type + '\'' +
                 ", gender='" + gender + '\'' +
                 ", isHelp=" + isHelp +
-                ", page=" + page +
                 '}';
     }
 }
