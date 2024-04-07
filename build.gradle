@@ -28,4 +28,6 @@ dependencies {
     // Convierte de json a objetos de java
     // https://mvnrepository.com/artifact/io.github.openfeign/feign-gson
     implementation group: 'io.github.openfeign', name: 'feign-gson', version: '13.2.1'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
 }
